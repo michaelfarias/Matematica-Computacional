@@ -48,20 +48,32 @@ public class Gaus {
 	}
 
 	public static void main(String[] args) {
-		float a[][] = new float[3][3];
-		a[0][0] = 3f;
-		a[0][1] = 2f;
-		a[0][2] = 4f;
-		a[1][0] = 1f;
-		a[1][1] = 1f;
-		a[1][2] = 2f;
-		a[2][0] = 4f;
-		a[2][1] = 3f;
-		a[2][2] = -2f;
+		float sistema[][] = new float[3][3];
+		sistema[0][0] = 3f;
+		sistema[0][1] = 2f;
+		sistema[0][2] = 4f;
+		sistema[1][0] = 1f;
+		sistema[1][1] = 1f;
+		sistema[1][2] = 2f;
+		sistema[2][0] = 4f;
+		sistema[2][1] = 3f;
+		sistema[2][2] = -2f;
+
+		// sistema[0][0] = 1f;
+		// sistema[0][1] = 2f;
+		// sistema[0][2] = -1f;
+		// sistema[1][0] = 2f;
+		// sistema[1][1] = -1f;
+		// sistema[1][2] = 1f;
+		// sistema[2][0] = 1f;
+		// sistema[2][1] = 1f;
+		// sistema[2][2] = 1f;
 
 		float b[] = { 1f, 2f, 3f };
 
-		Gaus.gaus(a, b);
+		// float b[] = { 2f, 3f, 6f };
+
+		Gaus.gaus(sistema, b);
 
 	}
 }

@@ -109,6 +109,8 @@ public class QuadraturaGaussiana {
 
 		System.out.println("Função 1: " + QuadraturaGaussiana.quadraturaGauss(1, 2, 4));
 		System.out.println("Função 2: " + QuadraturaGaussiana.quadraturaGauss(1, 5, 3));
+
+		/* Testar com n=2, n=3 */
 		System.out.println("Função 3: " + QuadraturaGaussiana.quadraturaGauss(0, 0.8, 3));
 		System.out.println("Função 3: " + QuadraturaGaussiana.quadraturaGauss(0, 0.8, 2));
 		System.out.println("Função 4: " + QuadraturaGaussiana.quadraturaGauss(-1, 1, 3));

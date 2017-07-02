@@ -70,6 +70,15 @@ public class FatoracaoLU {
 		}
 	}
 
+	public static double determinante(double a[][]) {
+		double s = 1;
+
+		for (int i = 0; i < a.length; i++)
+			s *= a[i][i];
+
+		return s * -1;
+	}
+
 	public static void main(String[] args) {
 		double a[][] = new double[3][3];
 		int p[] = new int[3];
@@ -89,19 +98,33 @@ public class FatoracaoLU {
 		// b[1] = 3;
 		// b[2] = -2;
 
-		a[0][0] = 5;
-		a[0][1] = 1;
-		a[0][2] = -2;
-		a[1][0] = 3;
-		a[1][1] = -9.4;
-		a[1][2] = 1.8;
-		a[2][0] = 1;
-		a[2][1] = 2.2;
-		a[2][2] = 4.6;
+		// a[0][0] = 5;
+		// a[0][1] = 1;
+		// a[0][2] = -2;
+		// a[1][0] = 3;
+		// a[1][1] = -9.4;
+		// a[1][2] = 1.8;
+		// a[2][0] = 1;
+		// a[2][1] = 2.2;
+		// a[2][2] = 4.6;
+		//
+		// b[0] = 10;
+		// b[1] = 22;
+		// b[2] = 10;
 
-		b[0] = 10;
-		b[1] = 22;
-		b[2] = 10;
+		a[0][0] = 1;
+		a[0][1] = 3;
+		a[0][2] = 5;
+		a[1][0] = 2;
+		a[1][1] = 4;
+		a[1][2] = 7;
+		a[2][0] = 1;
+		a[2][1] = 1;
+		a[2][2] = 0;
+
+		b[0] = 0;
+		b[1] = 1;
+		b[2] = -2;
 
 		FatoracaoLU.fatoracao(a, p);
 
@@ -109,6 +132,8 @@ public class FatoracaoLU {
 
 		FatoracaoLU.calcularLy(a, b);
 		FatoracaoLU.calcularUx(a, b);
+
+		System.out.println("Determinante: " + FatoracaoLU.determinante(a));
 
 		for (int i = 0; i < b.length; i++)
 			System.out.println(b[i]);

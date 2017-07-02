@@ -2,13 +2,14 @@ package br.ufc.crateus.matematicacomputacional.integracaonumerica;
 
 public class IntegracaoNumerica {
 
-	// e^x
 	private static float funcao(double x) {
+		// return (float) ((float) 1 / x);
 
-		 return (float) Math.pow(Math.E, x);
+		return (float) Math.pow(Math.E, x);
 
-//		return (float) (0.2 + 25 * x - 200 * Math.pow(x, 2) + 675 * Math.pow(x, 3) - 900 * Math.pow(x, 4)
-//				+ 400 * Math.pow(x, 5));
+		// return (float) (0.2 + 25 * x - 200 * Math.pow(x, 2) + 675 *
+		// Math.pow(x, 3) - 900 * Math.pow(x, 4)
+		// + 400 * Math.pow(x, 5));
 	}
 
 	public static void simpson13(float b, float a, int n) {
@@ -43,8 +44,20 @@ public class IntegracaoNumerica {
 
 	public static void main(String[] args) {
 
-		// IntegracaoNumerica.trapezio(2, 1,4 );
-//		IntegracaoNumerica.simpson13(0.8f, 0, 4);
+		// integral de e^x [0,1] REGRA COMPOSTA
+		// IntegracaoNumerica.trapezio(1, 0, 10);
+
+		// 0.2 + 25x - 200x^2 + 675x^3 - 900x^4 + 400^5 REGRA COMPOSTA
+		// IntegracaoNumerica.trapezio(0.8f, 0, 10);
+
+		/* integral de 1/x [3, 3.6] REGRA SIMPLES */
+		// IntegracaoNumerica.trapezio(3.6f, 3, 1);
+
+		// 0.2 + 25x - 200x^2 + 675x^3 - 900x^4 + 400^5 REGRA COMPOSTA
+		// IntegracaoNumerica.simpson13(0.8f, 0, 4);
+
+		// integral de e^x [0,1]
+		// IntegracaoNumerica.simpson13(1, 0, 10);
 
 	}
 }
